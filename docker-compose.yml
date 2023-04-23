@@ -18,6 +18,9 @@ services:
     volumes:
       - krb5kdc:/etc/krb5kdc
       - ./kdc/krb5.conf:/etc/kdc/krb5.conf
+    ports:
+      - "88:88/udp"
+      - "88:88/tcp"
     networks:
       - example
 
